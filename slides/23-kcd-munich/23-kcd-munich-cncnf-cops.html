@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+y<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -33,16 +33,31 @@
 
 <section>
 <section id="slide-org1056120" data-background-image="./pics/KCD-title.png">
+    <aside class="notes">
+        - Thanks everybody for being here
+        - It is amazing to see how much the cloud native community has grown and how much we have grown together in barely a couple of years
+        - And this very event is a good example of this. It is really amazing to see how a simple issue in github merely fueled by the enthusiasm of a bunch of volunteers can end up in an event like this one
+        - Indeed in this session I'm going to talk about communities, and how you can grow your own in your organization
+        - But, before we go to the meat of the talk, let me tell you a story...
+    </aside>
 </section>
 </section>
 <section>
 <section id="slide-org5965378">
 <h2 id="org5965378">This is the story of Ted</h2>
 
+<aside class="notes">
+    - So, this is a story about Ted, a midjourney character by the way
+    - Ted is a middle-aged sys-admin and self-proclaimed "infra nerd".
+    - He's a cool guy, he likes spending time with family and friends, and goes to the office twice a week (only because he's forced to)
+    - He works for an american scaled-up startup that has been into the field of distributed computing for about a decade now
+</aside>
 <div id="org0fd58cd" class="figure">
 <p><img src="./pics/ted.png" alt="ted.png" />
 </p>
 </div>
+<aside class="notes">
+</aside>
 </section>
 <section id="slide-org2009ead">
 <h3 id="org2009ead">A shift in roles</h3>
@@ -51,6 +66,11 @@
 <p><img src="./pics/ted_laptop.png" alt="ted_laptop.png" />
 </p>
 </div>
+<aside class="notes">
+    - In more than a decade in tech, he's witnessed several revolutions, from mastering the dark arts of batch scripting to automate repetitive tasks,
+    - .. to the fleeting craze of dealing with indentation issues in ansible playbooks, as he inevitably slowly becomes a full time YAML engineer
+    - For years he's been working relatively confortably in a central team of sys-admins, loading software, patching servers and blaming DEVs for not testing enough their software and filling the /var/ filesystem with useless debug logs. Those people...
+</aside>
 </section>
 <section id="slide-org3b01424">
 <h3 id="org3b01424">Ted meets scrum</h3>
@@ -59,6 +79,12 @@
 <p><img src="./pics/ted_scrum.png" alt="ted_scrum.png" />
 </p>
 </div>
+<aside class="notes">
+    - Ted's world changed when he was unexpectedly moved to a distributed agile team. Some manager in his company heard the word DevOps in a conference and he was moved to a virtual scrum where he gets to cloudify their applications
+    - The day of Ted starts at 9 AM by attending the daily scrum. Ted's less favorite time of the day.
+    - As he hears through the morning rants of his DBA colleague Rajesh whose tickets he barely understands
+    - He reflects how good it was when sys-admins met for an informal morning coffee. Surely teleworking has paid a toll on him, as he feels more isolated, stressed and burnout than ever.
+</aside>
 </section>
 <section id="slide-orga709e62">
 <h3 id="orga709e62">Ted goes cloud native</h3>
@@ -67,10 +93,22 @@
 <p><img src="./pics/ted-cncf.png" alt="ted-cncf.png" />
 </p>
 </div>
+<aside class="notes">
+    - Ted's company decided some time ago to adopt Kubernetes, and with 
+    - Oviously he started with nana and the DevOps guy videos, like many of us, and after and a lot of suffering and a bunch of incidents, he's finally getting there
+    - He's even spotted what he believes is a bug in ArgoCD, but he's not confident enough to report it upstream
+</aside>
 </section>
 <section id="slide-org4ee4653">
 <h3 id="org4ee4653">Silos everywhere</h3>
 
+<aside class="notes">
+    - And the end of the week, Ted went to reflect about his current career development
+    - Undoubtly as a curious engineered he enjoyed larning about development practices, pipelines and cloud, and his company loads faster and better, and he has enjoyed 
+    - But what he was promised is that DevOps came to break down silos among Dev and Ops teams, when it reallity they ended up creating new ones between DevOps teams and engineers themselves
+    - One day he decided to call his all sys-admin colleagues. It turns out every team has been doing a bit of the same in isolation and have heard different versions of the platform vision of their organization
+    - Finally he decided to meet them next week for lunch, discuss how each of them is doing and talk about that he just heard to solve their dependency management issues: Renovate
+</aside>
 <div id="orgddd5429" class="figure">
 <p><img src="./pics/ted-pensative-call.png" alt="ted-pensative-call.png" />
 </p>
@@ -80,25 +118,43 @@
 <section>
     <h2 id="org184c77d"></h2>
     <pre  class="example" >
-@aprilwensel
+By  @aprilwensel
     </pre>
     <section data-auto-animate>
         <div data-id="box" style="height: 50px; color: #002b36; background: salmon;">Suffering in Software Engineering</div>
+        <aside class="notes">
+            - All these are just synthoms of a much wider phenomenon
+            - April Wensel, we are indeed experimenting some human harships in this small world called IT
+        </aside>
     </section>
     <section data-auto-animate>
         <div data-id="box" style="height: 50px; color: #002b36; background: salmon;">Suffering in Software Engineering</div>
         <h3>Stress and burnout </h3>
+        <aside class="notes">
+            - Stress and burnout
+            - Big issues, maybe some of you heard of them or experienced them
+            - In a world most connected than ever, agile setups, shorter iterations and remote disconnections have exacerbated them
+        </aside>
     </section>
     <section data-auto-animate>
         <div data-id="box" style="height: 50px; color: #002b36; background: salmon;">Suffering in Software Engineering</div>
         <h3>Stress and burnout </h3>
         <h3> Impostor Syndrome </h3>
+        <aside class="notes">
+            - Importor Syndrome
+            - Where you feel you are not good enough, everyone is better than you, you don't belong
+        </aside>
     </section>
     <section data-auto-animate>
         <div data-id="box" style="height: 50px; color: #002b36; background: salmon;">Suffering in Software Engineering</div>
         <h3>Stress and burnout </h3>
         <h3> Impostor Syndrome </h3>
         <h3> "Talent shortage" myth</h3>
+        <aside class="notes">
+            - Talent shortage myth
+            - And I believe it's a myth, and we'll talk about it later on.
+            - Often combined with a lack of diversity
+        </aside>
     </section>
     <section data-auto-animate>
         <div data-id="box" style="height: 50px; color: #002b36; background: salmon;">Suffering in Software Engineering</div>
@@ -106,6 +162,12 @@
         <h3> Impostor Syndrome </h3>
         <h3> "Talent shortage" myth</h3>
         <h3> Poor user experience in our product</h3>
+        <aside class="notes">
+            - Poor user experience in our products
+            - And I'm very glad to the trend of platform engineering in this conference
+            - And developers portals are making their way to the cloud native ecosystem
+            - But let's face it, we're still far from there
+        </aside>
     </section>
     <section data-auto-animate>
         <div data-id="box" style="height: 50px; color: #002b36; background: salmon;">Suffering in Software Engineering</div>
@@ -113,21 +175,21 @@
         <h3> Impostor Syndrome </h3>
         <h3> "Talent shortage" myth</h3>
         <h3> Poor user experience in our product</h3>
-        <h3> Unethical products</h3>
-    </section>
-    <section data-auto-animate>
-        <div data-id="box" style="height: 50px; color: #002b36; background: salmon;">Suffering in Software Engineering</div>
-        <h3>Stress and burnout </h3>
-        <h3> Impostor Syndrome </h3>
-        <h3> "Talent shortage" myth</h3>
-        <h3> Poor user experience in our product</h3>
-        <h3> Unethical products</h3>
         <h3> Failed projects</h3>
+        <aside class="notes">
+            - And lastly failed projects
+            - As people aren't working together well, and a lot of people are trying to solve these problems individually
+        </aside>
     </section>
 </section>
 <section>
 <section id="slide-orgede2899">
 <h3 id="orgede2899">Conway's Law</h3>
+<aside class="notes">
+    - But what if I told you this is not only affecting affecting humans but even the software we produce?
+    - "Indeed in IT there's a law called Conway's lay which states that the social organization of a business is reflected in the architecture of the IT programs it produces.
+    - So an over-compartmentalised structure leads to what are called data silos, or other things that stop us or obstruct us in our work as engineers in general."
+</aside>
 
 <div id="org0820582" class="figure">
 <p><img src="./pics/new-angle-conways-law.jpeg" alt="new-angle-conways-law.jpeg" />
@@ -148,6 +210,11 @@
 </p>
 </div>
 
+<aside class="notes">
+    - And every organization is a world in itself, be that a newly founded started to a decades long IT provider we all have.. our issues
+    - Anyway if you're wondering what's the FAANGs company behind each, I just removed it not to get in troubles but you can check it in the link
+    - Luckily, I'm going to introduce you one social organization that I've found to be the most effective to tackle the root of these problems, the so called communities of practice
+</aside>
 <p>
     <pre  class="example" >
 Ref: <a href="https://bonkersworld.net/organizational-charts">https://bonkersworld.net/organizational-charts</a>
@@ -162,6 +229,13 @@ Ref: <a href="https://bonkersworld.net/organizational-charts">https://bonkerswor
 <p>
 Group of people that share a passion or concern for what they do and interact regularly to make it better
 </p>
+<aside class="notes">
+    - For those of you new to this
+    - It's a term conined already in the 90s by Wegner Taylor
+    - And they represents a Group of people that share a passion or concern for what they do and interact regularly to make it better
+    - Recently it has become very popular in the enterprise given the popularity of agile methodologies and multi-disciplinary teams
+    - As we indeed share a common passion for cloud technologies in this conference, we would just need to meet regularly to be called community of practice
+</aside>
 </blockquote>
 </section>
 
@@ -393,9 +467,18 @@ My community journey&#x2026;
 </section>
 </div>
 </div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
 
 <script>
+ let notes = document.querySelectorAll('aside.notes');
+ notes.forEach(n => {
+	   let html = n.innerHTML;
+	   html = html.trim().replace(/\n/g, '<br/>');
+	   n.innerHTML = html;
+ });
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
@@ -405,7 +488,8 @@ dependencies: [
  { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
  { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
  { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }],
+		 plugins: [ RevealNotes ]
 
 });
 
